@@ -6,6 +6,7 @@ const nature = document.querySelector('.nature');
 const oceans = document.querySelector('.oceans');
 const animals = document.querySelector('.animals');
 const people = document.querySelector('.people');
+
 let searchValue;
 const more = document.querySelector('.more');
 let page = 1;

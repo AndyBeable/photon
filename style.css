@@ -44,7 +44,6 @@ header {
   padding: 0.5rem;
   width: 100%;
   border: none;
-  border: 1px solid rgb(77, 146, 106);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -117,9 +116,15 @@ button {
 
 .featured {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   overflow: scroll;
+}
+
+@media screen and (min-width: 600px) {
+  .featured {
+    justify-content: center;
+  }
 }
 
 .subject {
