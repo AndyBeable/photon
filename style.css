@@ -18,10 +18,11 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding: 3rem 0rem;
 }
 
 .header-container {
-  width: 50%;
+  width: 70%;
   color: #fff;
 }
 
@@ -44,6 +45,8 @@ header {
   width: 100%;
   border: none;
   border: 1px solid rgb(77, 146, 106);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .search-form button {
@@ -54,6 +57,8 @@ header {
   color: #ffffff;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .search-form button:hover {
@@ -92,6 +97,10 @@ header {
   align-items: center;
 }
 
+button {
+  text-transform: uppercase;
+}
+
 .more {
   padding: 1rem 3rem;
   background-color: rgb(77, 146, 106);
@@ -106,9 +115,31 @@ header {
   background-color: rgb(55, 112, 79);
 }
 
+.featured {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: scroll;
+}
+
 .subject {
   padding: 1rem 2rem;
-  background-color: rgb(77, 146, 106);
   border: none;
   color: #fff;
+  border-radius: 10px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+
+.nature {
+  background-color: rgb(77, 146, 106);
+}
+.oceans {
+  background-color: rgb(92, 169, 192);
+}
+.animals {
+  background-color: rgb(226, 148, 96);
+}
+.people {
+  background-color: rgb(243, 112, 103);
 }

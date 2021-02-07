@@ -3,6 +3,9 @@ const gallery = document.querySelector('.gallery');
 const searchInput = document.querySelector('.search-input');
 const form = document.querySelector('.search-form');
 const nature = document.querySelector('.nature');
+const oceans = document.querySelector('.oceans');
+const animals = document.querySelector('.animals');
+const people = document.querySelector('.people');
 let searchValue;
 const more = document.querySelector('.more');
 let page = 1;
@@ -24,6 +27,9 @@ function updateInput(e) {
 }
 
 nature.addEventListener('click', loadNature);
+oceans.addEventListener('click', loadOceans);
+animals.addEventListener('click', loadAnimals);
+people.addEventListener('click', loadPeople);
 
 async function fetchApi(url) {
   const dataFetch = await fetch(url, {
@@ -85,6 +91,24 @@ async function loadMore(query) {
 async function loadNature() {
   clear();
   fetchLink = `https://api.pexels.com/v1/search?query=nature&per_page=15&page=1`;
+  const data = await fetchApi(fetchLink);
+  generatePictures(data);
+}
+async function loadOceans() {
+  clear();
+  fetchLink = `https://api.pexels.com/v1/search?query=oceans&per_page=15&page=1`;
+  const data = await fetchApi(fetchLink);
+  generatePictures(data);
+}
+async function loadAnimals() {
+  clear();
+  fetchLink = `https://api.pexels.com/v1/search?query=animals&per_page=15&page=1`;
+  const data = await fetchApi(fetchLink);
+  generatePictures(data);
+}
+async function loadPeople() {
+  clear();
+  fetchLink = `https://api.pexels.com/v1/search?query=people&per_page=15&page=1`;
   const data = await fetchApi(fetchLink);
   generatePictures(data);
 }
