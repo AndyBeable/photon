@@ -2,6 +2,7 @@ const auth = '563492ad6f9170000100000112ea80bd3b5646778fec532774e48b71'; //ADD T
 const gallery = document.querySelector('.gallery');
 const searchInput = document.querySelector('.search-input');
 const form = document.querySelector('.search-form');
+const nature = document.querySelector('.nature');
 let searchValue;
 const more = document.querySelector('.more');
 let page = 1;
@@ -9,6 +10,7 @@ let fetchLink;
 let currentSearch;
 
 //Event Listeners
+
 searchInput.addEventListener('input', updateInput);
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -20,6 +22,8 @@ more.addEventListener('click', loadMore);
 function updateInput(e) {
   searchValue = e.target.value;
 }
+
+nature.addEventListener('click', loadNature);
 
 async function fetchApi(url) {
   const dataFetch = await fetch(url, {
@@ -67,13 +71,20 @@ function clear() {
   searchInput.value = '';
 }
 
-async function loadMore() {
+async function loadMore(query) {
   page++;
   if (currentSearch) {
     fetchLink = `https://api.pexels.com/v1/search?query=${query}+query&per_page=15&page=${page}`;
   } else {
     fetchLink = `https://api.pexels.com/v1/curated?per_page=15&page=${page}`;
   }
+  const data = await fetchApi(fetchLink);
+  generatePictures(data);
+}
+
+async function loadNature() {
+  clear();
+  fetchLink = `https://api.pexels.com/v1/search?query=nature&per_page=15&page=1`;
   const data = await fetchApi(fetchLink);
   generatePictures(data);
 }

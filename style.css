@@ -5,28 +5,36 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
   display: flex;
   flex-direction: column;
-  min-height: 30vh;
+  min-height: 50vh;
   justify-content: center;
   align-items: center;
+  background-image: url(/assets/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-header h2 {
-  padding: 2rem;
+.header-container {
+  width: 50%;
+  color: #fff;
 }
 
 #logo {
   text-decoration: none;
-  color: black;
+  color: #ffffff;
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+  font-style: italic;
 }
 
 .search-form {
-  padding: 2rem;
+  padding: 2rem 0rem;
   display: flex;
 }
 
@@ -35,16 +43,21 @@ header h2 {
   padding: 0.5rem;
   width: 100%;
   border: none;
-  border: 1px solid rgb(111, 162, 238);
+  border: 1px solid rgb(77, 146, 106);
 }
 
 .search-form button {
   border: none;
   padding: 0.5rem;
   font-size: 1rem;
-  background: rgb(111, 162, 238);
+  background: rgb(77, 146, 106);
   color: #ffffff;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-form button:hover {
+  background: rgb(55, 112, 79);
 }
 
 .gallery-info {
@@ -63,7 +76,7 @@ header h2 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   grid-gap: 2rem;
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
 }
 
 .gallery-img img {
@@ -81,9 +94,21 @@ header h2 {
 
 .more {
   padding: 1rem 3rem;
-  background-color: rgb(111, 162, 238);
+  background-color: rgb(77, 146, 106);
   color: #fff;
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.more:hover {
+  background-color: rgb(55, 112, 79);
+}
+
+.subject {
+  padding: 1rem 2rem;
+  background-color: rgb(77, 146, 106);
+  border: none;
+  color: #fff;
 }
