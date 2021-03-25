@@ -13,3 +13,12 @@ Users should be to:
 
 ## Links
 Live url: https://photon.vercel.app/
+
+## My Process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS Grid
+- JS 
+- Fetch API
