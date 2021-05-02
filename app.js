@@ -16,7 +16,7 @@ let currentSearch;
 //Event Listeners
 
 searchInput.addEventListener('input', updateInput);
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   currentSearch = searchValue;
   searchPhotos(searchValue);
@@ -45,13 +45,13 @@ async function fetchApi(url) {
 }
 
 function generatePictures(data) {
-  data.photos.forEach(photo => {
+  data.photos.forEach((photo) => {
     const galleryImg = document.createElement('div');
     galleryImg.classList.add('gallery-img');
     galleryImg.innerHTML = `
             <div class="gallery-info">
             <p>${photo.photographer}</p>
-            <a href=${photo.src.original}>Download</a>
+            <a href=${photo.src.original} download>Download</a>
             </div>
             <img src=${photo.src.large}></img>
             `;
