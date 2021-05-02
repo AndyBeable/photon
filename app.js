@@ -1,4 +1,4 @@
-const auth = '563492ad6f9170000100000112ea80bd3b5646778fec532774e48b71'; //ADD THE AUTH KEY
+const AUTH_KEY = '563492ad6f9170000100000112ea80bd3b5646778fec532774e48b71'; //ADD THE AUTH KEY
 const gallery = document.querySelector('.gallery');
 const searchInput = document.querySelector('.search-input');
 const form = document.querySelector('.search-form');
@@ -37,7 +37,7 @@ async function fetchApi(url) {
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      Authorization: auth,
+      Authorization: AUTH_KEY,
     },
   });
   const data = await dataFetch.json();

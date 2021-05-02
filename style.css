@@ -21,14 +21,18 @@ header {
   padding: 3rem 0rem;
 }
 
-.header-container {
-  width: 70%;
-  color: #fff;
+button {
+  text-transform: uppercase;
 }
 
-#logo {
+.header-container {
+  width: 70%;
+  color: hsl(0, 0%, 100%);
+}
+
+.logo {
   text-decoration: none;
-  color: #ffffff;
+  color: hsl(0, 0%, 100%);
   font-size: 3.5rem;
   letter-spacing: 1px;
   font-style: italic;
@@ -52,8 +56,8 @@ header {
   border: none;
   padding: 0.5rem;
   font-size: 1rem;
-  background: rgb(77, 146, 106);
-  color: #ffffff;
+  background: hsl(145, 31%, 44%);
+  color: hsl(0, 0%, 100%);
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   border-top-right-radius: 10px;
@@ -61,19 +65,19 @@ header {
 }
 
 .search-form button:hover {
-  background: rgb(55, 112, 79);
+  background: hsl(145, 34%, 33%);
 }
 
 .gallery-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: gray;
+  color: hsl(0, 0%, 50%);
   padding: 0.5rem 0rem;
 }
 
 .gallery-info a {
-  color: gray;
+  color: hsl(0, 0%, 50%);
 }
 
 .gallery {
@@ -96,14 +100,10 @@ header {
   align-items: center;
 }
 
-button {
-  text-transform: uppercase;
-}
-
 .more {
   padding: 1rem 3rem;
   background-color: hsl(145, 31%, 44%);
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   border: none;
   font-size: 1.2rem;
   cursor: pointer;
@@ -111,7 +111,7 @@ button {
 }
 
 .more:hover {
-  background-color: rgb(55, 112, 79);
+  background-color: hsl(145, 34%, 33%);
 }
 
 .featured {
@@ -131,21 +131,21 @@ button {
 .subject {
   padding: 1rem 2rem;
   border: none;
-  color: #fff;
+  color: hsl(0, 0%, 100%);
   border-radius: 10px;
   margin-right: 1rem;
   cursor: pointer;
 }
 
 .nature {
-  background-color: rgb(77, 146, 106);
+  background-color: hsl(145, 31%, 44%);
 }
 .oceans {
-  background-color: rgb(92, 169, 192);
+  background-color: hsl(194, 44%, 56%);
 }
 .animals {
-  background-color: rgb(226, 148, 96);
+  background-color: hsl(24, 69%, 63%);
 }
 .people {
-  background-color: rgb(243, 112, 103);
+  background-color: hsl(4, 85%, 68%);
 }
