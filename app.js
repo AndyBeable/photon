@@ -12,7 +12,6 @@ let searchValue;
 let page = 1;
 let fetchLink;
 let currentSearch;
-let queryNature = 'nature';
 
 //Event Listeners
 
@@ -116,4 +115,5 @@ async function loadPeople() {
   generatePictures(data);
 }
 
+// INITIAL RENDER
 curatedPhotos();
