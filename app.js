@@ -6,12 +6,13 @@ const nature = document.querySelector('.nature');
 const oceans = document.querySelector('.oceans');
 const animals = document.querySelector('.animals');
 const people = document.querySelector('.people');
+const more = document.querySelector('.more');
 
 let searchValue;
-const more = document.querySelector('.more');
 let page = 1;
 let fetchLink;
 let currentSearch;
+let queryNature = 'nature';
 
 //Event Listeners
 
@@ -44,6 +45,7 @@ async function fetchApi(url) {
   return data;
 }
 
+// FUNCTIONALITY
 function generatePictures(data) {
   data.photos.forEach((photo) => {
     const galleryImg = document.createElement('div');
